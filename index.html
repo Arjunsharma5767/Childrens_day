@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Children's Day from Arjun Sharma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;700&family=Exo+2:wght@700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Roboto Mono', monospace;
+            color: #e0e0e0;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Digital grid overlay */
+        .digital-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Binary rain effect */
+        .binary-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .binary-digit {
+            position: absolute;
+            color: rgba(0, 255, 255, 0.7);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            animation: binaryFall linear infinite;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+        }
+
+        @keyframes binaryFall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Circuit elements */
+        .circuit {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .circuit-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.7), transparent);
+            height: 2px;
+            animation: circuitPulse 3s infinite;
+        }
+
+        .circuit-node {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            animation: nodePulse 2s infinite;
+        }
+
+        @keyframes circuitPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes nodePulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            margin-bottom: 40px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.05) 2px,
+                rgba(0, 255, 255, 0.05) 4px
+            );
+            z-index: -1;
+        }
+
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(0, 255, 255, 0.3);
+            animation: gradient-shift 4s ease infinite, glitch 2s infinite;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            font-family: 'Exo 2', sans-serif;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Tech icons around header */
+        .header-icon {
+            position: absolute;
+            font-size: 2rem;
+            animation: iconFloat 3s ease-in-out infinite;
+            z-index: 1;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .header-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .header-icon:nth-child(2) { top: 15%; right: 8%; animation-delay: 0.5s; }
+        .header-icon:nth-child(3) { bottom: 15%; left: 8%; animation-delay: 1s; }
+        .header-icon:nth-child(4) { bottom: 10%; right: 5%; animation-delay: 1.5s; }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.2); }
+        }
+
+        .message-container {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .message-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(0, 255, 255, 0.03) 10px,
+                rgba(0, 255, 255, 0.03) 20px
+            );
+            z-index: -1;
+        }
+
+        .message-container::after {
+            content: '</>';
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 3rem;
+            opacity: 0.2;
+            color: #00ffff;
+            font-family: 'Roboto Mono', monospace;
+            animation: codePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes codePulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.4; }
+        }
+
+        .message {
+            font-size: 1.4rem;
+            line-height: 2;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            text-align: justify;
+        }
+
+        .signature {
+            text-align: right;
+            font-size: 2rem;
+            color: #00ffff;
+            font-weight: bold;
+            margin-top: 30px;
+            font-family: 'Rajdhani', sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .activities {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .activities h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .activity-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .activity-item {
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.8), rgba(40, 40, 80, 0.8));
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity-item:hover {
+            background: linear-gradient(135deg, rgba(0, 50, 100, 0.8), rgba(0, 30, 60, 0.8));
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .activity-item i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00ffff;
+            transition: all 0.4s ease;
+        }
+
+        .activity-item:hover i {
+            color: #ff00ff;
+            transform: scale(1.2);
+        }
+
+        .activity-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            font-family: 'Exo 2', sans-serif;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .activity-item:hover h3 {
+            color: #00ffff;
+        }
+
+        .activity-item p {
+            transition: color 0.3s ease;
+        }
+
+        .activity-item:hover p {
+            color: #e0e0e0;
+        }
+
+        .wishes-section {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .wishes-section h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .wish-button {
+            background: linear-gradient(135deg, #00ffff, #0099cc);
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50px;
+            padding: 20px 45px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 10px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+            font-family: 'Exo 2', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wish-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .wish-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .wish-button:hover {
+            background: linear-gradient(135deg, #00cccc, #006699);
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 255, 255, 0.5);
+        }
+
+        .wish-display {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            color: #e0e0e0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.8), rgba(40, 40, 80, 0.8));
+            font-family: 'Exo 2', sans-serif;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        /* Tech Memory Lane Section */
+        .memory-lane {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .memory-lane h2 {
+            color: #00ffff;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #00ffff, #ff00ff);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .memory-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .memory-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background: linear-gradient(135deg, #00ffff, #0099cc);
+            border: 3px solid #0a0a1a;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            animation: memoryPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes memoryPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .memory-content {
+            padding: 25px 35px;
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.8), rgba(40, 40, 80, 0.8));
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .memory-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .memory-content h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.6rem;
+        }
+
+        .memory-content p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .memory-content .date {
+            color: #ff00ff;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Tech Gift Section */
+        .gift-section {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .gift-section h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .tech-gift {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 10px 20px rgba(0, 255, 255, 0.3));
+        }
+
+        .tech-gift:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .tech-gift-body {
+            width: 180px;
+            height: 120px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 10px;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .tech-gift-screen {
+            width: 160px;
+            height: 90px;
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            border-radius: 5px;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .tech-gift-screen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.1) 2px,
+                rgba(0, 255, 255, 0.1) 4px
+            );
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        .tech-gift-base {
+            width: 180px;
+            height: 30px;
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-gift-light {
+            width: 10px;
+            height: 10px;
+            background: #00ffff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            animation: lightBlink 2s infinite;
+        }
+
+        @keyframes lightBlink {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .tech-gift.opened .tech-gift-screen {
+            background: linear-gradient(135deg, #0f3460, #16213e, #0f3460);
+            animation: screenGlow 1s ease;
+        }
+
+        @keyframes screenGlow {
+            0% { box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); }
+            50% { box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.8); }
+            100% { box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); }
+        }
+
+        .gift-message {
+            display: none;
+            font-size: 1.8rem;
+            color: #00ffff;
+            font-family: 'Exo 2', sans-serif;
+            margin-top: 25px;
+            animation: fadeInBounce 1s ease;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        @keyframes fadeInBounce {
+            0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+            60% { transform: translateY(-10px) scale(1.1); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .fun-facts {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .fun-facts h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .fact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .fact-item {
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.8), rgba(40, 40, 80, 0.8));
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .fact-item:hover {
+            background: linear-gradient(135deg, rgba(0, 50, 100, 0.8), rgba(0, 30, 60, 0.8));
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .fact-item h3 {
+            color: #ff00ff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-family: 'Exo 2', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .fact-item:hover h3 {
+            color: #00ffff;
+        }
+
+        .fact-item p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            transition: color 0.3s ease;
+        }
+
+        .fact-item:hover p {
+            color: #e0e0e0;
+        }
+
+        .coding-section {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .coding-section h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .coding-canvas {
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            margin: 0 auto 25px;
+            display: block;
+            background-color: #0a0a1a;
+            cursor: crosshair;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .coding-controls {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .color-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-btn:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .color-btn.active {
+            border-color: #00ffff;
+            transform: scale(1.2);
+            box-shadow: 0 6px 25px rgba(0, 255, 255, 0.5);
+        }
+
+        .clear-btn {
+            background: linear-gradient(135deg, #00ffff, #0099cc);
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 10px;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .clear-btn:hover {
+            background: linear-gradient(135deg, #00cccc, #006699);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Floating tech elements */
+        .floating {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .tech-icon {
+            color: rgba(0, 255, 255, 0.9);
+            font-size: 2.8rem;
+            animation: float-up 12s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+        }
+
+        .binary {
+            font-size: 2.8rem;
+            animation: float-up 16s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.6));
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .code {
+            font-size: 2.8rem;
+            animation: float-up 14s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(50vh) rotate(180deg) scale(1.2);
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        footer p {
+            color: #e0e0e0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Digital particles effect */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00ffff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ffff;
+            animation: particleFloat 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Neon text effect */
+        .neon-text {
+            color: #00ffff;
+            text-shadow: 
+                0 0 5px #00ffff,
+                0 0 10px #00ffff,
+                0 0 15px #00ffff,
+                0 0 20px #00ffff;
+            animation: neonFlicker 2s infinite alternate;
+        }
+
+        @keyframes neonFlicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Tech message section */
+        .tech-section {
+            background: linear-gradient(135deg, rgba(20, 20, 40, 0.9), rgba(30, 30, 60, 0.9));
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 255, 255, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-section::before {
+            content: '{ }';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ffff;
+            font-family: 'Roboto Mono', monospace;
+            animation: codeRotate 20s linear infinite;
+        }
+
+        @keyframes codeRotate {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .tech-section h2 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-family: 'Exo 2', sans-serif;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-messages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-card {
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.8), rgba(40, 40, 80, 0.8));
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .tech-card i {
+            font-size: 3.5rem;
+            color: #00ffff;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .tech-card h3 {
+            color: #ff00ff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .tech-card p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .message {
+                font-size: 1.2rem;
+            }
+            
+            .activities h2, .wishes-section h2, .gift-section h2, .fun-facts h2, .coding-section h2, .memory-lane h2, .tech-section h2 {
+                font-size: 2rem;
+            }
+            
+            .coding-canvas {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .memory-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .memory-item::before {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .memory-item::after {
+                left: 16px;
+            }
+
+            .tech-messages {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Digital grid overlay -->
+    <div class="digital-grid"></div>
+    
+    <!-- Binary rain effect -->
+    <div class="binary-rain" id="binaryRain"></div>
+
+    <!-- Circuit elements -->
+    <div class="circuit">
+        <div class="circuit-line" style="width: 200px; top: 15%; left: 5%; transform: rotate(30deg);"></div>
+        <div class="circuit-node" style="top: 15%; left: 5%;"></div>
+        <div class="circuit-node" style="top: 25%; left: 15%;"></div>
+        
+        <div class="circuit-line" style="width: 250px; top: 70%; right: 10%; transform: rotate(-20deg);"></div>
+        <div class="circuit-node" style="top: 70%; right: 10%;"></div>
+        <div class="circuit-node" style="top: 60%; right: 20%;"></div>
+        
+        <div class="circuit-line" style="width: 180px; top: 40%; left: 70%; transform: rotate(60deg);"></div>
+        <div class="circuit-node" style="top: 40%; left: 70%;"></div>
+        <div class="circuit-node" style="top: 50%; left: 80%;"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-icon"><i class="fas fa-microchip"></i></div>
+            <div class="header-icon"><i class="fas fa-robot"></i></div>
+            <div class="header-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="header-icon"><i class="fas fa-code"></i></div>
+            <h1 class="main-title">HAPPY CHILDREN'S DAY<br>FROM ARJUN SHARMA</h1>
+            <p class="subtitle">A Digital Message for My Future Tech Leaders</p>
+        </header>
+
+        <div class="message-container">
+            <p class="message">
+                My dear students,<br><br>
+                
+                Today is a special day - Children's Day! In this digital age, I want to celebrate not just your childhood, but your potential to become the innovators and tech leaders of tomorrow. You are the future coders, engineers, and digital creators who will shape our world.<br><br>
+                
+                Every day in our classroom, I'm amazed by your ability to grasp complex concepts, your logical thinking, and your creativity in solving problems. You bring fresh perspectives to technology and show me that the future of innovation is in good hands.<br><br>
+                
+                Remember that technology is not just about screens and code - it's about using tools to solve real-world problems and make life better for everyone. I encourage you to stay curious, keep learning, and never be afraid to experiment and make mistakes. That's how great innovations are born.<br><br>
+                
+                On this special day, I want you to promise me that you'll always use technology responsibly, ethically, and for the greater good. You have the power to create amazing things that can change the world, and I'll always be here to guide you on your journey.<br><br>
+                
+                Happy Children's Day to my brilliant students! May your day be filled with discovery, innovation, and all the things that spark your passion for technology!
+            </p>
+            <p class="signature">With digital regards,<br>Arjun Sharma 💻</p>
+        </div>
+
+        <div class="tech-section">
+            <h2 class="neon-text">Why You Inspire Me</h2>
+            <div class="tech-messages">
+                <div class="tech-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Your Innovative Ideas</h3>
+                    <p>The way you approach problems with fresh perspectives and creative solutions constantly reminds me why technology education is so important. Your ideas are the seeds of tomorrow's innovations.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Your Logical Thinking</h3>
+                    <p>Watching you break down complex problems into manageable parts and apply logical reasoning fills me with pride. You're developing the critical thinking skills that are essential in the digital world.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Your Collaborative Spirit</h3>
+                    <p>The way you work together on coding projects, help each other debug problems, and share knowledge shows me the power of teamwork in technology. You understand that great things are built together.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3 Your Ambition</h3>
+                    <p>Your drive to learn new programming languages, explore emerging technologies, and push beyond your comfort zone inspires me. You're not just learning to code - you're preparing to launch into the future.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Your Ethical Mindset</h3>
+                    <p>The thoughtful questions you ask about digital privacy, security, and the ethical use of technology show me that you're not just becoming skilled technicians, but responsible digital citizens.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Your Problem-Solving</h3>
+                    <p>Watching you tackle coding challenges with persistence and creativity is truly rewarding. You understand that every bug is an opportunity to learn and every problem has a solution waiting to be discovered.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="memory-lane">
+            <h2 class="neon-text">Our Tech Journey</h2>
+            <div class="timeline">
+                <div class="memory-item left">
+                    <div class="memory-content">
+                        <div class="date">First Coding Class</div>
+                        <h3>Hello, World!</h3>
+                        <p>The day we wrote our first lines of code together. The excitement on your faces when you saw your first program run successfully was unforgettable!</p>
+                    </div>
+                </div>
+                <div class="memory-item right">
+                    <div class="memory-content">
+                        <div class="date">Robotics Workshop</div>
+                        <h3>Building the Future</h3>
+                        <p>Your amazing robots and innovative designs showed me how naturally you understand engineering concepts. The teamwork and problem-solving were outstanding!</p>
+                    </div>
+                </div>
+                <div class="memory-item left">
+                    <div class="memory-content">
+                        <div class="date">Hackathon</div>
+                        <h3>Code Warriors</h3>
+                        <p>Watching you collaborate under pressure to create functional apps in just 24 hours was incredible. Your resilience and creativity shone through!</p>
+                    </div>
+                </div>
+                <div class="memory-item right">
+                    <div class="memory-content">
+                        <div class="date">Tech Exhibition</div>
+                        <h3>Showcasing Innovation</h3>
+                        <p>Your projects at the school tech fair wowed everyone. From AI applications to sustainable tech solutions, you demonstrated remarkable talent and vision.</p>
+                    </div>
+                </div>
+                <div class="memory-item left">
+                    <div class="memory-content">
+                        <div class="date">Cybersecurity Workshop</div>
+                        <h3>Digital Guardians</h3>
+                        <p>Learning about cybersecurity together and seeing how seriously you take digital responsibility made me proud. You're becoming responsible digital citizens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="activities">
+            <h2 class="neon-text">Tech Activities for Children's Day</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Coding Challenge</h3>
+                    <p>Solve programming puzzles</p>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robotics</h3>
+                    <p>Build and program robots</p>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Game Development</h3>
+                    <p>Create your own games</p>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>VR Experience</h3>
+                    <p>Explore virtual worlds</p>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Circuit Building</h3>
+                    <p>Design electronic circuits</p>
+                </div>
+                <div class="activity-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>App Design</h3>
+                    <p>Prototype mobile apps</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gift-section">
+            <h2 class="neon-text">Digital Gift for You</h2>
+            <div class="tech-gift" id="techGift">
+                <div class="tech-gift-body">
+                    <div class="tech-gift-screen"></div>
+                    <div class="tech-gift-light"></div>
+                </div>
+                <div class="tech-gift-base"></div>
+            </div>
+            <div class="gift-message" id="giftMessage">
+                🚀 You are the future of technology! Keep innovating and changing the world! 💻
+            </div>
+            <p style="font-size: 1.3rem; color: #e0e0e0; font-family: 'Exo 2', sans-serif;">Click on the device to unlock your digital surprise!</p>
+        </div>
+
+        <div class="fun-facts">
+            <h2 class="neon-text">Tech Facts for Young Innovators</h2>
+            <div class="fact-list">
+                <div class="fact-item">
+                    <h3>First Computer Programmer</h3>
+                    <p>The world's first computer programmer was Ada Lovelace, who wrote algorithms for Charles Babbage's Analytical Engine in the 1840s.</p>
+                </div>
+                <div class="fact-item">
+                    <h3>Young Tech Innovators</h3>
+                    <p>Many successful tech entrepreneurs started coding at a young age. Bill Gates wrote his first program at 13, and Mark Zuckerberg created a messaging app in middle school.</p>
+                </div>
+                <div class="fact-item">
+                    <h3>Internet Origins</h3>
+                    <p>The internet began as ARPANET, a project of the U.S. Department of Defense, with the first message sent in 1969 between two computers.</p>
+                </div>
+                <div class="fact-item">
+                    <h3>Future Technologies</h3>
+                    <p>Technologies like quantum computing, neural interfaces, and advanced AI that seem like science fiction today may become commonplace during your lifetime.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="coding-section">
+            <h2 class="neon-text">Digital Canvas</h2>
+            <p style="font-size: 1.3rem; color: #e0e0e0; margin-bottom: 20px; font-family: 'Exo 2', sans-serif;">Create your own digital masterpiece!</p>
+            <canvas id="codingCanvas" class="coding-canvas" width="400" height="300"></canvas>
+            <div class="coding-controls">
+                <div class="color-btn active" style="background-color: #00ffff;" data-color="#00ffff"></div>
+                <div class="color-btn" style="background-color: #ff00ff;" data-color="#ff00ff"></div>
+                <div class="color-btn" style="background-color: #00ff00;" data-color="#00ff00"></div>
+                <div class="color-btn" style="background-color: #ffff00;" data-color="#ffff00"></div>
+                <div class="color-btn" style="background-color: #ff5500;" data-color="#ff5500"></div>
+                <div class="color-btn" style="background-color: #ffffff;" data-color="#ffffff"></div>
+                <div class="color-btn" style="background-color: #ff0066;" data-color="#ff0066"></div>
+                <div class="color-btn" style="background-color: #000000;" data-color="#000000"></div>
+            </div>
+            <button class="clear-btn" id="clearCanvas">Clear Canvas</button>
+        </div>
+
+        <div class="wishes-section">
+            <h2 class="neon-text">Digital Wishes for You</h2>
+            <button class="wish-button" onclick="showWish()">✨ Click for a Tech Wish! ✨</button>
+            <div class="wish-display" id="wishDisplay"></div>
+        </div>
+
+        <footer>
+            <p class="neon-text">Wishing all my future tech leaders a very Happy Children's Day! You are the code that will write our future! 💻</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create binary rain effect
+        function createBinaryRain() {
+            const binaryRain = document.getElementById('binaryRain');
+            const binaryChars = ['0', '1'];
+            
+            for (let i = 0; i < 50; i++) {
+                const binaryDigit = document.createElement('div');
+                binaryDigit.classList.add('binary-digit');
+                binaryDigit.textContent = binaryChars[Math.floor(Math.random() * binaryChars.length)];
+                binaryDigit.style.left = Math.random() * 100 + '%';
+                binaryDigit.style.animationDuration = Math.random() * 5 + 5 + 's';
+                binaryDigit.style.opacity = Math.random() * 0.5 + 0.3;
+                binaryDigit.style.fontSize = Math.random() * 10 + 14 + 'px';
+                binaryDigit.style.animationDelay = Math.random() * 5 + 's';
+                
+                binaryRain.appendChild(binaryDigit);
+            }
+        }
+
+        createBinaryRain();
+
+        // Create digital particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 5000);
+        }
+
+        setInterval(createParticle, 300);
+
+        // Create floating tech elements
+        function createFloatingElement(type) {
+            const element = document.createElement('div');
+            element.classList.add('floating');
+            
+            if (type === 'tech-icon') {
+                element.classList.add('tech-icon');
+                const icons = ['<i class="fas fa-microchip"></i>', '<i class="fas fa-robot"></i>', '<i class="fas fa-laptop-code"></i>', '<i class="fas fa-code"></i>', '<i class="fas fa-bug"></i>'];
+                element.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            } else if (type === 'binary') {
+                element.classList.add('binary');
+                const binaryStrings = ['01001', '10110', '11001', '00101', '10010'];
+                element.textContent = binaryStrings[Math.floor(Math.random() * binaryStrings.length)];
+            } else {
+                element.classList.add('code');
+                const codeStrings = ['</>', '{}', '();', '=>', '[]'];
+                element.textContent = codeStrings[Math.floor(Math.random() * codeStrings.length)];
+            }
+            
+            element.style.left = Math.random() * 100 + '%';
+            const duration = Math.random() * 6 + 8;
+            element.style.animationDuration = duration + 's';
+            const size = Math.random() * 1.5 + 1;
+            element.style.fontSize = size + 'rem';
+            
+            document.body.appendChild(element);
+            
+            setTimeout(() => {
+                element.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(() => {
+            createFloatingElement('tech-icon');
+            createFloatingElement('binary');
+            createFloatingElement('code');
+        }, 800);
+
+        // Create digital particles
+        function createDigitalParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const colors = ['#00ffff', '#ff00ff', '#00ff00', '#ffff00'];
+            particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            particle.style.left = Math.random() * 100 + '%';
+            
+            const size = Math.random() * 6 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            
+            const duration = Math.random() * 3 + 3;
+            particle.style.animationDuration = duration + 's';
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createDigitalParticle, 200);
+
+        // Tech wishes array
+        const wishes = [
+            "May your code always compile on the first try! 💻",
+            "Wishing you endless bugs to fix and lessons to learn! 🐛",
+            "May your algorithms always be efficient and elegant! ⚡",
+            "You are the future of technology - keep innovating! 🚀",
+            "May your digital creations change the world! 🌍",
+            "Keep pushing the boundaries of what's possible! 🔮",
+            "Wishing you breakthrough ideas and successful implementations! 💡",
+            "You have the power to code a better future! ✨",
+            "May your passion for technology never fade! 🔥",
+            "You are capable of creating amazing digital solutions! 🛠️",
+            "Keep learning, keep coding, keep creating! 👨‍💻",
+            "Your curiosity is the best feature in your code! 🧠",
+            "Believe in your ability to solve any problem! 🧩",
+            "You are the architects of tomorrow's digital world! 🏗️"
+        ];
+
+        function showWish() {
+            const wishDisplay = document.getElementById('wishDisplay');
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            
+            wishDisplay.innerHTML = '';
+            
+            const wishElement = document.createElement('p');
+            wishElement.textContent = randomWish;
+            wishElement.style.opacity = '0';
+            wishElement.style.transform = 'scale(0.8)';
+            wishElement.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            
+            wishDisplay.appendChild(wishElement);
+            
+            setTimeout(() => {
+                wishElement.style.opacity = '1';
+                wishElement.style.transform = 'scale(1)';
+            }, 10);
+
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createDigitalParticle, i * 50);
+            }
+        }
+
+        // Tech gift functionality
+        const techGift = document.getElementById('techGift');
+        const giftMessage = document.getElementById('giftMessage');
+        let giftOpened = false;
+
+        techGift.addEventListener('click', function() {
+            if (!giftOpened) {
+                techGift.classList.add('opened');
+                giftMessage.style.display = 'block';
+                giftOpened = true;
+                
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(createDigitalParticle, i * 30);
+                }
+            }
+        });
+
+        // Coding canvas functionality
+        const canvas = document.getElementById('codingCanvas');
+        const ctx = canvas.getContext('2d');
+        const colorBtns = document.querySelectorAll('.color-btn');
+        const clearBtn = document.getElementById('clearCanvas');
+        
+        let isDrawing = false;
+        let currentColor = '#00ffff';
+        
+        if (window.innerWidth < 768) {
+            canvas.width = 300;
+            canvas.height = 225;
+        }
+        
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                colorBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentColor = this.getAttribute('data-color');
+            });
+        });
+        
+        function startDrawing(e) {
+            isDrawing = true;
+            draw(e);
+        }
+        
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = currentColor;
+            
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+        
+        function stopDrawing() {
+            if (isDrawing) {
+                isDrawing = false;
+                ctx.beginPath();
+            }
+        }
+        
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+        
+        canvas.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousedown', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        });
+        
+        canvas.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousemove', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        });
+        
+        canvas.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            const mouseEvent = new MouseEvent('mouseup', {});
+            canvas.dispatchEvent(mouseEvent);
+        });
+        
+        clearBtn.addEventListener('click', function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+    </script>
+</body>
+</html>
